@@ -817,10 +817,9 @@ roamhusk.wrapUp = () => {
   }
 };
 
-roamhusk.isCodeBlock = element => {
+roamhusk.isCodeBlock = element =>
   element.nextSibling?.classList.contains("CodeMirror") ||
-  element.parentElement?.parentElement?.classList.contains("CodeMirror")
-};
+  element.parentElement?.parentElement?.classList.contains("CodeMirror");
 
 roamhusk.processKey = e => {
   if ([...document.querySelectorAll("textarea")]
