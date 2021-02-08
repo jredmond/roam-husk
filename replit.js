@@ -286,7 +286,7 @@ var refreshButton = Object.assign(document.createElement("div"), {
 // Comment/uncomment here for debugging
 roamhusk.addElement(
   refreshButton,
-  document.querySelector(".rm-topbar .flex-h-box")
+  document.querySelector(".rm-topbar")
 );
 
 // --- Main helper functions ---
@@ -531,7 +531,7 @@ roamhusk.counterWidget = () => {
   });
   roamhusk.addElement(
     widget,
-    document.querySelector(".rm-topbar .flex-h-box")
+    document.querySelector(".rm-topbar")
   );
 };
 
@@ -566,7 +566,7 @@ toggleModeButton.style.cssText =
 
 roamhusk.addElement(
   toggleModeButton,
-  document.querySelector(".rm-topbar .flex-h-box")
+  document.querySelector(".rm-topbar")
 );
 
 // Make Alt+D leave review mode
