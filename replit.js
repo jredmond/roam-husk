@@ -861,10 +861,12 @@ roamhusk.processKey = e => {
     roamhusk.currentCard += 1;
     if (roamhusk.currentCard === roamhusk.cardsToReview.length) {
       console.log("All cards due reviewed");
+      roamhusk.active = false;
       roamhusk.wrapUp();
+    } else {
+      roamhusk.showAnswer = false;
+      roamhusk.showCard();
     }
-    roamhusk.showAnswer = false;
-    roamhusk.showCard();
   } else if (e.key === "x") {
     roamhusk.active = false;
     roamhusk.wrapUp();
