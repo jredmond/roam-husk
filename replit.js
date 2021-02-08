@@ -817,8 +817,14 @@ roamhusk.wrapUp = () => {
   }
 };
 
+roamhusk.isCodeBlock = element => {
+  element.nextSibling?.classList.contains("CodeMirror") ||
+  element.parentElement?.parentElement?.classList.contains("CodeMirror")
+};
+
 roamhusk.processKey = e => {
-  if (document.querySelector("textarea")) {
+  if ([...document.querySelectorAll("textarea")]
+        .some(x => !roamhusk.isCodeBlock(x))) {
     console.log(
       "Actively editing a block, so don't process keystrokes as shortcuts"
     );
